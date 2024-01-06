@@ -43,7 +43,7 @@
     function IniciarSesion(){
         let email=document.getElementById('email');
         let password=document.getElementById('password');
-        if(email.value != ""){
+        if(email.value != person.email){
             email.classList.add("is-valid");
             email.classList.remove("is-invalid");
         }else{
