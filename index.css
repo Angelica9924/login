@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*-----MAIN-----*/
+.main-login {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-inputs input {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+/* ------------------- LOGIN ------------------- */
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.login-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-content {
+    background-color: #a85dbe;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: flex;
+    background-color: #abb7c0;
+    padding: 7px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: auto;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #a85dbe;
+}
+
