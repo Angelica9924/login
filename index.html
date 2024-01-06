@@ -5,24 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
 </head>
 <body>
     <main class="main-login">
         <section class="login">
             <article class="login-article">
                 <div class="login-title">
-                    <h2>Bienvenido</h2>
+                    <h2>Welcome</h2>
                 </div>
 
                 <div class="login-content">
                     <div class="main-inputs">
-                        <input type="email" name="email" placeholder="Nombre">
-                        <input type="password" name="password" placeholder="Contraseña">
+                        <input type="email" id="email" class="form-control" placeholder="Email">
+                        <input type="password" id="password" class="form-control" placeholder="Password">
                     </div>
                 </div>
-                <button class="btn">Iniciar sesión</button>
+                <button class="btn" onclick="IniciarSesion()">Log in</button>
             </article>
         </section>
     </main>
 </body>
+<script>
+    persons = [
+        {
+            name:"Juan",
+            email: "juan@gmail.com",
+            password: "password"
+        },
+        {
+            name:"Sara",
+            email: "sara@gmail.com",
+            password:"password"
+        }
+    ]
+
+    function IniciarSesion(){
+        let email=document.getElementById('email');
+        let password=document.getElementById('password');
+        if(email.value != ""){
+            email.classList.add("is-valid");
+            email.classList.remove("is-invalid");
+        }else{
+            email.classList.add("is-invalid");
+            email.classList.remove("is-valid");            
+        }
+
+        persons.forEach(function(person){
+            if(email.value == person.email && password.value==person.password){
+                sessionStorage.setItem('name',person.name);
+                location.href="./home.html";
+            }
+        });
+    }
+</script>
 </html>
